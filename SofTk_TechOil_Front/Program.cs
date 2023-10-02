@@ -7,15 +7,7 @@ namespace SofTk_TechOil_Front
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var AllowSpecificOrigins = "";
-
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy(name: AllowSpecificOrigins, policy =>
-                {
-                    policy.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
-                });
-            });
+     
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -68,8 +60,7 @@ namespace SofTk_TechOil_Front
             app.UseAuthorization();
 
             app.UseSession();
-
-            app.UseCors(AllowSpecificOrigins);
+           
 
             app.MapControllerRoute(
                 name: "default",

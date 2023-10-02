@@ -1,7 +1,5 @@
-﻿
-
-//var token = getCookie("Token");
-var token = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJNaUFwcFN1YmplY3RDbGFpbSIsIm5hbWVpZCI6IjgiLCJyb2xlIjoiMiIsIm5iZiI6MTY5NjE5NzYzNiwiZXhwIjoxNjk4Nzg5NjM2LCJpYXQiOjE2OTYxOTc2MzZ9.CjzM1Bp92BnVtW_qx8IaxXW85w4QgN79ZsrFF2f9dmjqkdRB85P1n9sQd8I9Ia2WL_CcdvHixkfMXDkw4VV4AA"
+﻿var token = getCookie("Token");
+//var token = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJNaUFwcFN1YmplY3RDbGFpbSIsIm5hbWVpZCI6IjgiLCJyb2xlIjoiMiIsIm5iZiI6MTY5NjE5NzYzNiwiZXhwIjoxNjk4Nzg5NjM2LCJpYXQiOjE2OTYxOTc2MzZ9.CjzM1Bp92BnVtW_qx8IaxXW85w4QgN79ZsrFF2f9dmjqkdRB85P1n9sQd8I9Ia2WL_CcdvHixkfMXDkw4VV4AA"
 let table = new DataTable('#usuarios', {
     
     ajax: {

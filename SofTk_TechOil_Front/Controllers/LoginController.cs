@@ -6,6 +6,7 @@ using System.Security.Claims;
 using Data.DTOs;
 using Data.Base;
 using Newtonsoft.Json;
+using SofTk_TechOil_Front.ViewModels;
 
 namespace SofTk_TechOil_Front.Controllers
 {
@@ -41,11 +42,11 @@ namespace SofTk_TechOil_Front.Controllers
 
             HttpContext.Session.SetString("Token", resultadoObjeto.Token);
 
-            //var homeViewModel = new HomeViewModel();
-            //homeViewModel.Token = resultadoObjeto.Token;
+            var homeViewModel = new HomeViewModels();
+            homeViewModel.Token = resultadoObjeto.Token;
 
-           // return View("~/Views/Home/Index.cshtml", homeViewModel);
-            return View("~/Views/Home/Index.cshtml");
+            return View("~/Views/Home/Index.cshtml", homeViewModel);
+            //return View("~/Views/Home/Index.cshtml");
         }
 
 
