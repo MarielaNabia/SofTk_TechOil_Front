@@ -8,6 +8,7 @@ namespace Data.DTOs
 {
     public class UsuariosDto
     {
+        public int Id { get; set; }
         public int CodUsuario { get; set; }
         public string Nombre { get; set; }
         public int DNI { get; set; }

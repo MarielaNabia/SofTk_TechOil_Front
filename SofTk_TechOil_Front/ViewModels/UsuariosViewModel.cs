@@ -1,8 +1,11 @@
-﻿namespace SofTk_TechOil_Front.ViewModels
+﻿using Data.DTOs;
+
+namespace SofTk_TechOil_Front.ViewModels
 {
     
         public class UsuariosViewModel
         {
+        public int Id { get; set; }
         public int CodUsuario { get; set; }
         public string Nombre { get; set; }
         public int DNI { get; set; }
@@ -11,23 +14,17 @@
         public bool Activo { get; set; }
 
 
-
-
-
-        //public static implicit operator UsuariosViewModel(UsuarioDto usuario)
-        //{
-        //    var usuariosViewModel = new UsuariosViewModel();
-        //    usuariosViewModel.Id = usuario.Id;
-        //    usuariosViewModel.FirstName = usuario.Nombre;
-        //    usuariosViewModel.UserName = usuario.UserName;
-        //    usuariosViewModel.Email = usuario.Email;
-        //    usuariosViewModel.dni = usuario.dni;
-        //    usuariosViewModel.tipo = usuario.tipo;
-        //    usuariosViewModel.contrasena = usuario.contrasena;
-
-
-        //    return usuariosViewModel;
-        //}
+        public static implicit operator UsuariosViewModel(UsuariosDto usuario)
+        {
+            var usuariosViewModel = new UsuariosViewModel();
+            usuariosViewModel.Id = usuario.Id;
+            usuariosViewModel.CodUsuario = usuario.CodUsuario;
+            usuariosViewModel.Nombre = usuario.Nombre;
+            usuariosViewModel.DNI = usuario.DNI;
+            usuariosViewModel.Password = usuario.Password;
+            usuariosViewModel.RoleId = usuario.RoleId;
+            return usuariosViewModel;
+        }
     }
     }
 
